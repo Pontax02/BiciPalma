@@ -27,16 +27,15 @@ public class BiciPalma {
         System.out.println("\n **** caso TEST visualizar anclajes libres **** \n");
 
         System.out.println("anclajesLibres: " + estacion.anclajesLibres());
-    }
-}
 
-/***
-        estacion.consultarAnclajes();
+
+
+
 
         /*
          * caso TEST anclar bicicleta(s)
          */
-/***
+
         System.out.println("\n **** caso TEST anclar bicicleta(s) **** \n");
 
         int[] bicicletas = {291, 292, 293, 294};
@@ -49,7 +48,8 @@ public class BiciPalma {
 
         System.out.println("anclajes libres tras generar " + bicicletas.length
                 + " bicis: " + estacion.anclajesLibres());
-
+    }
+}
         /*
          * Caso TEST consultar bicicletas ancladas
          */

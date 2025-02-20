@@ -1,18 +1,18 @@
 package domain.estacion;
 
+
 public class Estacion {
 
     private int id;
     private final String direccion;
-    private int anclajes;
     private int[] anclajesLibres;
+    private final Anclajes anclajes;
 
-
-    public Estacion(int id, String direccion, int anclajes) {
+    public Estacion(int id, String direccion, int numAnclajes) {
         this.id = id;
         this.direccion = direccion;
-        this.anclajes = anclajes;
         this.anclajesLibres = new int[6];
+        this.anclajes = new Anclajes(numAnclajes);
     }
 
     public void  consultarEstacion(){
@@ -29,7 +29,7 @@ public class Estacion {
     }
 
     public int getAnclajes(){
-        return this.anclajes;
+        return this.anclajes.numAnclajes();
     }
 
     public int anclajesLibres() {
@@ -44,6 +44,27 @@ public class Estacion {
         return anclajesLibres;
     }
 
+    public void anclarBicicleta(int biciID) {
+        int posicion = 0;
+        int numeroAnclaje = posicion + 1;
 
-
+        for (Anclaje anclaje : this.anclajes.anclajes()) {
+            if (!anclaje.isOcupado()) {
+                anclaje.anclarBici(biciID);
+                mostrarAnclaje(biciID, posicion + 1);
+                return;
+            }
+            posicion++;
+        }
+    }
+    private void mostrarAnclaje(int biciID, int numeroAnclaje) {
+        System.out.println("bicicleta " + biciID
+                + " anclada en el anclaje " + numeroAnclaje);
+    }
 }
+
+
+
+
+
+
