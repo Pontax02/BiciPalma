@@ -1,8 +1,11 @@
 package edu.estatuas;
 
 import domain.bicicleta.Bicicleta;
+import domain.tarjetausuario.TarjetaUsuario;
 import domain.estacion.Estacion;
 import static org.junit.Assert.*;
+
+import domain.tarjetausuario.TarjetaUsuario;
 import org.junit.Test;
 import org.junit.BeforeClass;
 
@@ -37,8 +40,19 @@ public class BiciTest {
 
         assertEquals(idExpected, bici.getId());
     }
+    @Test
+    public void ConstructorEstacionTest(){
+
+        int idExpected = 101;
+
+        TarjetaUsuario tarjeta = new TarjetaUsuario(101, true );
+
+        assertEquals(idExpected, tarjeta.getID());
 
 
+
+
+    }
 
 
 
