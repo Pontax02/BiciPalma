@@ -60,6 +60,22 @@ public class Estacion {
         System.out.println("bicicleta " + biciID
                 + " anclada en el anclaje " + numeroAnclaje);
     }
+
+    public void consultarAnclajes() {
+
+        int posicion = 0;
+        int numeroAnclaje= 0;
+
+        for (Anclaje anclaje : this.anclajes.anclajes()) {
+
+            numeroAnclaje = posicion + 1;
+            posicion++;
+            if (anclaje.isOcupado()) {
+                System.out.println("Anclaje " + numeroAnclaje + " " + anclaje.biciID);
+            } else {System.out.println("Anclaje " + numeroAnclaje + " " + " libre");
+            }
+        }
+    }
 }
 
 
