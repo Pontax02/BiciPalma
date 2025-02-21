@@ -1,19 +1,19 @@
 package domain.estacion;
 
+import domain.bicicleta.Bicicleta;
+
 public class Anclaje {
 
     private int id;
-    private Integer biciID = null;
+    public Bicicleta biciID = null;
     private boolean ocupado = false;
 
-    Anclaje(int id) {
-        this.id = id;
-    }
+
     boolean isOcupado(){
         return this.ocupado;
     }
 
-    void anclarBici(int biciID){
+    void anclarBici(Bicicleta biciID){
         this.biciID = biciID;
         this.ocupado = true;
     }
