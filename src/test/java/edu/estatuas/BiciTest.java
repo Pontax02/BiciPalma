@@ -44,11 +44,11 @@ public class BiciTest {
     public void ConstructorEstacionTest(){
 
         int idExpected = 101;
-
+        boolean estadoTarjeta = false;
         TarjetaUsuario tarjeta = new TarjetaUsuario(101, true );
 
         assertEquals(idExpected, tarjeta.getID());
-
+        assertEquals(estadoTarjeta, tarjeta.isActivada());
 
 
 

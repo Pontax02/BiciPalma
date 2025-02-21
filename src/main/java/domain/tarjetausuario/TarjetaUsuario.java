@@ -12,7 +12,12 @@ public class TarjetaUsuario {
 
     public int getID(){
         return this.id;
-
     }
+    public boolean isActivada(){
+        return this.activada;
+    }
+
+
+
     }
 
