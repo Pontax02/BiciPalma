@@ -1,6 +1,5 @@
 package domain.estacion;
 
-
 import domain.bicicleta.Bicicleta;
 
 public class Estacion {
@@ -20,9 +19,9 @@ public class Estacion {
     }
 
     public int getID(){
-    return this.id;
-
+        return this.id;
     }
+
     public String getDireccion(){
         return this.direccion;
 
@@ -33,13 +32,11 @@ public class Estacion {
     }
 
     public int anclajesLibres() {
-
         int anclajesLibres = 0;
         for (Anclaje anclaje : this.anclajes.anclajes()) {
             anclajesLibres = anclaje.isOcupado()? anclajesLibres: ++anclajesLibres;
         }
         return anclajesLibres;
-
     }
 
     public void anclarBicicleta(Bicicleta biciID) {

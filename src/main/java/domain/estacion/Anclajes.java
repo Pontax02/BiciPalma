@@ -18,7 +18,6 @@ public class Anclajes {
         return this.anclajes;
     }
 
-
     int numAnclajes(){
         return this.anclajes.length;
     }

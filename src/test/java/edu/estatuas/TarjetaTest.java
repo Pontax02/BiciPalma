@@ -14,8 +14,6 @@ public class TarjetaTest{
     public static void setUpBeforeClass(){
 
         tarjeta = new TarjetaUsuario("123456789",true);
-
-
     }
     @Test
     public void ConstructorTarjetaTest(){
@@ -25,16 +23,13 @@ public class TarjetaTest{
 
         assertEquals(idExpected, tarjeta.getID());
         assertEquals(estadoTarjeta, tarjeta.isActivada());
-
-
-
     }
     @Test
     public void consultarEstadoTarjetaTest(){
+
         boolean estadoTarjeta = true;
 
         assertEquals(estadoTarjeta, tarjeta.isActivada());
 
     }
-
 }
