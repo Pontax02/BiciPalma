@@ -2,19 +2,17 @@ package domain.tarjetausuario;
 
 public class TarjetaUsuario {
 
-    private final int id;
+    private final String id;
     private boolean activada;
 
-    public TarjetaUsuario(int id, boolean activada) {
+    public TarjetaUsuario(String id, boolean activada) {
         this.id = id;
         this.activada = activada;
     }
 
-    public int getID(){
+    public String getID(){
         return this.id;
     }
-
-
 
     public boolean isActivada(){
         return this.activada;

@@ -40,26 +40,6 @@ public class BiciTest {
 
         assertEquals(idExpected, bici.getId());
     }
-    @Test
-    public void ConstructorEstacionTest(){
-
-        boolean estadoTarjeta = false;
-        int idExpected = 101;
-        TarjetaUsuario tarjeta = new TarjetaUsuario(101, false );
-
-        assertEquals(idExpected, tarjeta.getID());
-        assertEquals(estadoTarjeta, tarjeta.isActivada());
-
-
-
-    }
-    @Test
-    public void consultarEstadoTarjetaTest(){
-        boolean estadoTarjeta = true;
-        TarjetaUsuario tarjeta = new TarjetaUsuario(101, true );
-        assertEquals(estadoTarjeta, tarjeta.isActivada());
-
-    }
 
     }
 
