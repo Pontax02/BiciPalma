@@ -7,16 +7,23 @@ public class TarjetaUsuario {
 
     public TarjetaUsuario(int id, boolean activada) {
         this.id = id;
-        this.activada = false;
+        this.activada = activada;
     }
 
     public int getID(){
         return this.id;
     }
+
+
+
     public boolean isActivada(){
         return this.activada;
     }
+    public void setTarjeta(boolean activada){
+        this.activada = activada;
 
+
+    }
 
 
     }
