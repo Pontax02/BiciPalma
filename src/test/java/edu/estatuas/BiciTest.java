@@ -5,7 +5,7 @@ import domain.tarjetausuario.TarjetaUsuario;
 import domain.estacion.Estacion;
 import static org.junit.Assert.*;
 
-import domain.tarjetausuario.TarjetaUsuario;
+
 import org.junit.Test;
 import org.junit.BeforeClass;
 
@@ -43,14 +43,23 @@ public class BiciTest {
     @Test
     public void ConstructorEstacionTest(){
 
-        int idExpected = 101;
         boolean estadoTarjeta = false;
-        TarjetaUsuario tarjeta = new TarjetaUsuario(101, true );
+        int idExpected = 101;
+        TarjetaUsuario tarjeta = new TarjetaUsuario(101, false );
 
         assertEquals(idExpected, tarjeta.getID());
         assertEquals(estadoTarjeta, tarjeta.isActivada());
 
 
+
+    }
+    @Test
+    public void consultarEstadoTarjetaTest(){
+        boolean estadoTarjeta = true;
+        TarjetaUsuario tarjeta = new TarjetaUsuario(101, true );
+        assertEquals(estadoTarjeta, tarjeta.isActivada());
+
+    }
 
     }
 
@@ -68,4 +77,3 @@ public class BiciTest {
 
 
 
-}
