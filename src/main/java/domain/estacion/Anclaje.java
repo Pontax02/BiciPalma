@@ -17,4 +17,9 @@ public class Anclaje {
         this.biciID = biciID;
         this.ocupado = true;
     }
+
+    int getBici() {
+
+        return biciID.getId();
+    }
 }
