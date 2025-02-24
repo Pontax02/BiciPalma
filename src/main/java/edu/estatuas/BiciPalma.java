@@ -55,12 +55,12 @@ public class BiciPalma {
         System.out.println("\n **** caso TEST consultar bicicletas ancladas **** \n");
 
         estacion.consultarAnclajes();
-    }
-}
+
+
         /*
          * Caso TEST retirar bicicleta
          */
-/***
+
         System.out.println("\n **** caso TEST retirar bicicleta **** \n");
 
         TarjetaUsuario tarjetaUsuario = new TarjetaUsuario("000456789", true);
@@ -77,7 +77,7 @@ public class BiciPalma {
         /*
          * Caso TEST tarjeta inactiva
          */
-/***
+
         System.out.println("\n **** caso TEST tarjeta inactiva **** \n");
 
         tarjetaUsuario.setActivada(false);
@@ -89,6 +89,8 @@ public class BiciPalma {
 
         estacion.consultarAnclajes();
     }
+
+
 }
-**/
+
 

@@ -1,6 +1,8 @@
 package domain.estacion;
 
 import domain.bicicleta.Bicicleta;
+import domain.tarjetausuario.TarjetaUsuario;
+import edu.estatuas.BiciPalma;
 
 public class Estacion {
 
@@ -73,6 +75,16 @@ public class Estacion {
             }
         }
     }
+    public boolean leerTarjetaUsuario(TarjetaUsuario tarjetaUsuario) {
+
+            return tarjetaUsuario.isActivada();
+
+
+
+    }
+
+
+
 }
 
 
