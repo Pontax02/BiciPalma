@@ -1,5 +1,7 @@
 package domain.estacion;
 
+import java.util.concurrent.ThreadLocalRandom;
+
 public class Anclajes {
 
     private Anclaje[] anclajes;
@@ -26,5 +28,8 @@ public class Anclajes {
         return this.anclajes[posicion].isOcupado();
     }
 
-
+    int seleccionarAnclaje(int posicion){
+        Integer idAnclaje = ThreadLocalRandom.current().nextInt(0, numAnclajes());
+        return idAnclaje;
+    }
 }
