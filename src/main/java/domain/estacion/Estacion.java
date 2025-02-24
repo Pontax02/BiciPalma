@@ -82,8 +82,10 @@ public class Estacion {
 
 
     }
-
-
+    private void mostrarBicicleta(Bicicleta bicicleta, int numeroAnclaje) {
+        System.out.println("bicicleta retirada: " + bicicleta.getId()
+                + " del anclaje: " + numeroAnclaje);
+    }
 
 }
 
