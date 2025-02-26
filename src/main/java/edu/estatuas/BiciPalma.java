@@ -28,7 +28,9 @@ public class BiciPalma {
 
         System.out.println("anclajesLibres: " + estacion.anclajesLibres());
 
-        estacion.consultarAnclajes();
+
+
+
 
         /*
          * caso TEST anclar bicicleta(s)
@@ -46,7 +48,6 @@ public class BiciPalma {
 
         System.out.println("anclajes libres tras generar " + bicicletas.length
                 + " bicis: " + estacion.anclajesLibres());
-
         /*
          * Caso TEST consultar bicicletas ancladas
          */
@@ -54,6 +55,7 @@ public class BiciPalma {
         System.out.println("\n **** caso TEST consultar bicicletas ancladas **** \n");
 
         estacion.consultarAnclajes();
+
 
         /*
          * Caso TEST retirar bicicleta
@@ -78,7 +80,7 @@ public class BiciPalma {
 
         System.out.println("\n **** caso TEST tarjeta inactiva **** \n");
 
-        tarjetaUsuario.setActivada(false);
+        tarjetaUsuario.setTarjeta(false);
 
         System.out.println("¿tarjeta de usuario activada? (true/false): "
                 + estacion.leerTarjetaUsuario(tarjetaUsuario));
@@ -87,6 +89,8 @@ public class BiciPalma {
 
         estacion.consultarAnclajes();
     }
+
+
 }
 
 
