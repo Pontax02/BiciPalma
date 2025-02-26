@@ -87,6 +87,30 @@ public class Estacion {
                 + " del anclaje: " + numeroAnclaje);
     }
 
+    public void retirarBicicleta(TarjetaUsuario tarjetaUsuario) {
+
+
+        if (leerTarjetaUsuario(tarjetaUsuario)) {
+
+            boolean biciRetirada = false;
+
+            while (!biciRetirada) {
+
+                int posicion = anclajes.seleccionarAnclaje();
+                int numeroAnclaje = posicion + 1;
+
+                if (anclajes.isAnclajeOcupado(posicion)) {
+                    mostrarBicicleta(anclajes.getBiciAt(posicion), numeroAnclaje);
+                    anclajes.liberarAnclaje(posicion);
+                    biciRetirada = true;
+                } else
+                    ;
+            }
+
+        } else {
+            System.out.println("Tarjeta de usuario inactiva :(");
+        }
+    }
 }
 
 

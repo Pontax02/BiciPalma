@@ -28,8 +28,16 @@ public class Anclajes {
         return this.anclajes[posicion].isOcupado();
     }
 
-    int seleccionarAnclaje(int posicion){
+    int seleccionarAnclaje(){
         Integer idAnclaje = ThreadLocalRandom.current().nextInt(0, numAnclajes());
         return idAnclaje;
+    }
+
+    int getBiciAt(int posicion) {
+        return this.anclajes[posicion].getBici();
+    }
+
+    void liberarAnclaje(int posicion) {
+        this.anclajes[posicion].liberarBici();
     }
 }

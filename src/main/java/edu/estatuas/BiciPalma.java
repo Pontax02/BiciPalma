@@ -80,7 +80,7 @@ public class BiciPalma {
 
         System.out.println("\n **** caso TEST tarjeta inactiva **** \n");
 
-        tarjetaUsuario.setActivada(false);
+        tarjetaUsuario.setTarjeta(false);
 
         System.out.println("¿tarjeta de usuario activada? (true/false): "
                 + estacion.leerTarjetaUsuario(tarjetaUsuario));

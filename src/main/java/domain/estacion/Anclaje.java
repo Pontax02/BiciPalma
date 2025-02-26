@@ -22,4 +22,9 @@ public class Anclaje {
 
         return biciID.getId();
     }
+
+    void liberarBici() {
+        this.biciID = null;
+        this.ocupado = false;
+    }
 }
